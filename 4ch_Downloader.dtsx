@@ -11,8 +11,8 @@
   DTS:LocaleID="1045"
   DTS:ObjectName="Package"
   DTS:PackageType="5"
-  DTS:VersionBuild="62"
-  DTS:VersionGUID="{48CB9764-7584-4826-8B1F-71F03F165255}">
+  DTS:VersionBuild="63"
+  DTS:VersionGUID="{B9444677-A31E-4FB4-81E2-E2127857E908}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:Variables>
@@ -1471,6 +1471,10 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA</BinaryItem>
           <DTS:Variables />
           <DTS:PropertyExpression
             DTS:Name="Arguments">" -t 60 -i "+"\""+@[User::destination_file_location_1]+"\""+" -vf fps=8,scale=379:-1,smartblur=ls=-0.5,crop=iw:ih-2:0:0 "+ "\""+@[User::destination_file_location_1_thumb]+"\""</DTS:PropertyExpression>
+          <DTS:PropertyExpression
+            DTS:Name="Executable">@[$Project::WorkspacePath]+"ffmpeg\\bin\\ffmpeg.exe"</DTS:PropertyExpression>
+          <DTS:PropertyExpression
+            DTS:Name="WorkingDirectory">@[$Project::WorkspacePath]+"ffmpeg\\bin"</DTS:PropertyExpression>
           <DTS:EventHandlers>
             <DTS:EventHandler
               DTS:refId="Package\Download Files Loop 1\Create Thumbnail File.EventHandlers[OnError]"
@@ -1596,9 +1600,9 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA</BinaryItem>
           </DTS:EventHandlers>
           <DTS:ObjectData>
             <ExecuteProcessData
-              Executable="D:\SSIS_Projects\4ch_Downloader\ffmpeg_2021_02_23\bin\ffmpeg.exe"
+              Executable="D:\SSIS_Projects\4ch_Downloader\4ch_Downloader_Workspace\ffmpeg\bin\ffmpeg.exe"
               Arguments=" -t 60 -i &quot;D:\SSIS_Projects\4ch_Downloader\4ch_Downloader_Workspace\Files_1\&quot; -vf fps=8,scale=379:-1,smartblur=ls=-0.5,crop=iw:ih-2:0:0 &quot;D:\SSIS_Projects\4ch_Downloader\4ch_Downloader_Workspace\Files_1_Thumbs\.gif&quot;"
-              WorkingDirectory="D:\SSIS_Projects\4ch_Downloader\ffmpeg_2021_02_23\bin" />
+              WorkingDirectory="D:\SSIS_Projects\4ch_Downloader\4ch_Downloader_Workspace\ffmpeg\bin" />
           </DTS:ObjectData>
         </DTS:Executable>
         <DTS:Executable
@@ -2504,6 +2508,10 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA</BinaryItem>
           <DTS:Variables />
           <DTS:PropertyExpression
             DTS:Name="Arguments">" -t 60 -i "+"\""+@[User::destination_file_location_2]+"\""+" -vf fps=8,scale=379:-1,smartblur=ls=-0.5,crop=iw:ih-2:0:0 "+ "\""+@[User::destination_file_location_2_thumb]+"\""</DTS:PropertyExpression>
+          <DTS:PropertyExpression
+            DTS:Name="Executable">@[$Project::WorkspacePath]+"ffmpeg\\bin\\ffmpeg.exe"</DTS:PropertyExpression>
+          <DTS:PropertyExpression
+            DTS:Name="WorkingDirectory">@[$Project::WorkspacePath]+"ffmpeg\\bin"</DTS:PropertyExpression>
           <DTS:EventHandlers>
             <DTS:EventHandler
               DTS:refId="Package\Download Files Loop 2\Create Thumbnail File.EventHandlers[OnError]"
@@ -2629,9 +2637,9 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA</BinaryItem>
           </DTS:EventHandlers>
           <DTS:ObjectData>
             <ExecuteProcessData
-              Executable="D:\SSIS_Projects\4ch_Downloader\ffmpeg_2021_02_23\bin\ffmpeg.exe"
+              Executable="D:\SSIS_Projects\4ch_Downloader\4ch_Downloader_Workspace\ffmpeg\bin\ffmpeg.exe"
               Arguments=" -t 60 -i &quot;D:\SSIS_Projects\4ch_Downloader\4ch_Downloader_Workspace\Files_2\&quot; -vf fps=8,scale=379:-1,smartblur=ls=-0.5,crop=iw:ih-2:0:0 &quot;D:\SSIS_Projects\4ch_Downloader\4ch_Downloader_Workspace\Files_2_Thumbs\.gif&quot;"
-              WorkingDirectory="D:\SSIS_Projects\4ch_Downloader\ffmpeg_2021_02_23\bin" />
+              WorkingDirectory="D:\SSIS_Projects\4ch_Downloader\4ch_Downloader_Workspace\ffmpeg\bin" />
           </DTS:ObjectData>
         </DTS:Executable>
         <DTS:Executable
@@ -3537,6 +3545,10 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA</BinaryItem>
           <DTS:Variables />
           <DTS:PropertyExpression
             DTS:Name="Arguments">" -t 60 -i "+"\""+@[User::destination_file_location_3]+"\""+" -vf fps=8,scale=379:-1,smartblur=ls=-0.5,crop=iw:ih-2:0:0 "+ "\""+@[User::destination_file_location_3_thumb]+"\""</DTS:PropertyExpression>
+          <DTS:PropertyExpression
+            DTS:Name="Executable">@[$Project::WorkspacePath]+"ffmpeg\\bin\\ffmpeg.exe"</DTS:PropertyExpression>
+          <DTS:PropertyExpression
+            DTS:Name="WorkingDirectory">@[$Project::WorkspacePath]+"ffmpeg\\bin"</DTS:PropertyExpression>
           <DTS:EventHandlers>
             <DTS:EventHandler
               DTS:refId="Package\Download Files Loop 3\Create Thumbnail File.EventHandlers[OnError]"
@@ -3662,9 +3674,9 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA</BinaryItem>
           </DTS:EventHandlers>
           <DTS:ObjectData>
             <ExecuteProcessData
-              Executable="D:\SSIS_Projects\4ch_Downloader\ffmpeg_2021_02_23\bin\ffmpeg.exe"
+              Executable="D:\SSIS_Projects\4ch_Downloader\4ch_Downloader_Workspace\ffmpeg\bin\ffmpeg.exe"
               Arguments=" -t 60 -i &quot;D:\SSIS_Projects\4ch_Downloader\4ch_Downloader_Workspace\Files_3\&quot; -vf fps=8,scale=379:-1,smartblur=ls=-0.5,crop=iw:ih-2:0:0 &quot;D:\SSIS_Projects\4ch_Downloader\4ch_Downloader_Workspace\Files_3_Thumbs\.gif&quot;"
-              WorkingDirectory="D:\SSIS_Projects\4ch_Downloader\ffmpeg_2021_02_23\bin" />
+              WorkingDirectory="D:\SSIS_Projects\4ch_Downloader\4ch_Downloader_Workspace\ffmpeg\bin" />
           </DTS:ObjectData>
         </DTS:Executable>
         <DTS:Executable
@@ -4570,6 +4582,10 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA</BinaryItem>
           <DTS:Variables />
           <DTS:PropertyExpression
             DTS:Name="Arguments">" -t 60 -i "+"\""+@[User::destination_file_location_4]+"\""+" -vf fps=8,scale=379:-1,smartblur=ls=-0.5,crop=iw:ih-2:0:0 "+ "\""+@[User::destination_file_location_4_thumb]+"\""</DTS:PropertyExpression>
+          <DTS:PropertyExpression
+            DTS:Name="Executable">@[$Project::WorkspacePath]+"ffmpeg\\bin\\ffmpeg.exe"</DTS:PropertyExpression>
+          <DTS:PropertyExpression
+            DTS:Name="WorkingDirectory">@[$Project::WorkspacePath]+"ffmpeg\\bin"</DTS:PropertyExpression>
           <DTS:EventHandlers>
             <DTS:EventHandler
               DTS:refId="Package\Download Files Loop 4\Create Thumbnail File.EventHandlers[OnError]"
@@ -4695,9 +4711,9 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA</BinaryItem>
           </DTS:EventHandlers>
           <DTS:ObjectData>
             <ExecuteProcessData
-              Executable="D:\SSIS_Projects\4ch_Downloader\ffmpeg_2021_02_23\bin\ffmpeg.exe"
+              Executable="D:\SSIS_Projects\4ch_Downloader\4ch_Downloader_Workspace\ffmpeg\bin\ffmpeg.exe"
               Arguments=" -t 60 -i &quot;D:\SSIS_Projects\4ch_Downloader\4ch_Downloader_Workspace\Files_4\&quot; -vf fps=8,scale=379:-1,smartblur=ls=-0.5,crop=iw:ih-2:0:0 &quot;D:\SSIS_Projects\4ch_Downloader\4ch_Downloader_Workspace\Files_4_Thumbs\.gif&quot;"
-              WorkingDirectory="D:\SSIS_Projects\4ch_Downloader\ffmpeg_2021_02_23\bin" />
+              WorkingDirectory="D:\SSIS_Projects\4ch_Downloader\4ch_Downloader_Workspace\ffmpeg\bin" />
           </DTS:ObjectData>
         </DTS:Executable>
         <DTS:Executable
@@ -5603,6 +5619,10 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA</BinaryItem>
           <DTS:Variables />
           <DTS:PropertyExpression
             DTS:Name="Arguments">" -t 60 -i "+"\""+@[User::destination_file_location_5]+"\""+" -vf fps=8,scale=379:-1,smartblur=ls=-0.5,crop=iw:ih-2:0:0 "+ "\""+@[User::destination_file_location_5_thumb]+"\""</DTS:PropertyExpression>
+          <DTS:PropertyExpression
+            DTS:Name="Executable">@[$Project::WorkspacePath]+"ffmpeg\\bin\\ffmpeg.exe"</DTS:PropertyExpression>
+          <DTS:PropertyExpression
+            DTS:Name="WorkingDirectory">@[$Project::WorkspacePath]+"ffmpeg\\bin"</DTS:PropertyExpression>
           <DTS:EventHandlers>
             <DTS:EventHandler
               DTS:refId="Package\Download Files Loop 5 Second Try\Create Thumbnail File.EventHandlers[OnError]"
@@ -5728,9 +5748,9 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA</BinaryItem>
           </DTS:EventHandlers>
           <DTS:ObjectData>
             <ExecuteProcessData
-              Executable="D:\SSIS_Projects\4ch_Downloader\ffmpeg_2021_02_23\bin\ffmpeg.exe"
+              Executable="D:\SSIS_Projects\4ch_Downloader\4ch_Downloader_Workspace\ffmpeg\bin\ffmpeg.exe"
               Arguments=" -t 60 -i &quot;D:\SSIS_Projects\4ch_Downloader\4ch_Downloader_Workspace\Files_5\&quot; -vf fps=8,scale=379:-1,smartblur=ls=-0.5,crop=iw:ih-2:0:0 &quot;D:\SSIS_Projects\4ch_Downloader\4ch_Downloader_Workspace\Files_5_Thumbs\.gif&quot;"
-              WorkingDirectory="D:\SSIS_Projects\4ch_Downloader\ffmpeg_2021_02_23\bin" />
+              WorkingDirectory="D:\SSIS_Projects\4ch_Downloader\4ch_Downloader_Workspace\ffmpeg\bin" />
           </DTS:ObjectData>
         </DTS:Executable>
         <DTS:Executable
