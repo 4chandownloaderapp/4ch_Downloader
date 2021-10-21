@@ -11,8 +11,8 @@
   DTS:LocaleID="1045"
   DTS:ObjectName="Package"
   DTS:PackageType="5"
-  DTS:VersionBuild="61"
-  DTS:VersionGUID="{F933EAF6-42C5-4EB7-9016-ACE95F0AD9A0}">
+  DTS:VersionBuild="62"
+  DTS:VersionGUID="{48CB9764-7584-4826-8B1F-71F03F165255}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:Variables>
@@ -1649,7 +1649,9 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA</BinaryItem>
           DTS:ThreadHint="1">
           <DTS:Variables />
           <DTS:PropertyExpression
-            DTS:Name="Arguments">"-ExecutionPolicy ByPass -command \". 'D:\\SSIS_Projects\\4ch_Downloader\\4ch_Downloader_Workspace\\Files_1_Script\\DownloadFile.ps1'\" \"http://"+@[User::File_link_1]+"\" \""+@[User::destination_file_location_1]+"\""</DTS:PropertyExpression>
+            DTS:Name="Arguments">"-ExecutionPolicy ByPass -command \". '"+@[$Project::WorkspacePath]+"Files_1_Script\\DownloadFile.ps1'\" \"http://"+@[User::File_link_1]+"\" \""+@[User::destination_file_location_1]+"\""</DTS:PropertyExpression>
+          <DTS:PropertyExpression
+            DTS:Name="WorkingDirectory">@[$Project::WorkspacePath]+"Files_1_Script"</DTS:PropertyExpression>
           <DTS:EventHandlers>
             <DTS:EventHandler
               DTS:refId="Package\Download Files Loop 1\Download File.EventHandlers[OnError]"
@@ -2680,7 +2682,9 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA</BinaryItem>
           DTS:ThreadHint="5">
           <DTS:Variables />
           <DTS:PropertyExpression
-            DTS:Name="Arguments">"-ExecutionPolicy ByPass -command \". 'D:\\SSIS_Projects\\4ch_Downloader\\4ch_Downloader_Workspace\\Files_2_Script\\DownloadFile.ps1'\" \"http://"+@[User::File_link_2]+"\" \""+@[User::destination_file_location_2]+"\""</DTS:PropertyExpression>
+            DTS:Name="Arguments">"-ExecutionPolicy ByPass -command \". '"+ @[$Project::WorkspacePath] +"Files_2_Script\\DownloadFile.ps1'\" \"http://"+@[User::File_link_2]+"\" \""+@[User::destination_file_location_2]+"\""</DTS:PropertyExpression>
+          <DTS:PropertyExpression
+            DTS:Name="WorkingDirectory">@[$Project::WorkspacePath]+"Files_2_Script"</DTS:PropertyExpression>
           <DTS:EventHandlers>
             <DTS:EventHandler
               DTS:refId="Package\Download Files Loop 2\Download File.EventHandlers[OnError]"
@@ -3711,7 +3715,9 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA</BinaryItem>
           DTS:ThreadHint="9">
           <DTS:Variables />
           <DTS:PropertyExpression
-            DTS:Name="Arguments">"-ExecutionPolicy ByPass -command \". 'D:\\SSIS_Projects\\4ch_Downloader\\4ch_Downloader_Workspace\\Files_3_Script\\DownloadFile.ps1'\" \"http://"+@[User::File_link_3]+"\" \""+@[User::destination_file_location_3]+"\""</DTS:PropertyExpression>
+            DTS:Name="Arguments">"-ExecutionPolicy ByPass -command \". '"+ @[$Project::WorkspacePath] +"Files_3_Script\\DownloadFile.ps1'\" \"http://"+@[User::File_link_3]+"\" \""+@[User::destination_file_location_3]+"\""</DTS:PropertyExpression>
+          <DTS:PropertyExpression
+            DTS:Name="WorkingDirectory">@[$Project::WorkspacePath]+"Files_3_Script"</DTS:PropertyExpression>
           <DTS:EventHandlers>
             <DTS:EventHandler
               DTS:refId="Package\Download Files Loop 3\Download File.EventHandlers[OnError]"
@@ -4742,7 +4748,9 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA</BinaryItem>
           DTS:ThreadHint="13">
           <DTS:Variables />
           <DTS:PropertyExpression
-            DTS:Name="Arguments">"-ExecutionPolicy ByPass -command \". 'D:\\SSIS_Projects\\4ch_Downloader\\4ch_Downloader_Workspace\\Files_4_Script\\DownloadFile.ps1'\" \"http://"+@[User::File_link_4]+"\" \""+@[User::destination_file_location_4]+"\""</DTS:PropertyExpression>
+            DTS:Name="Arguments">"-ExecutionPolicy ByPass -command \". '"+ @[$Project::WorkspacePath] +"Files_4_Script\\DownloadFile.ps1'\" \"http://"+@[User::File_link_4]+"\" \""+@[User::destination_file_location_4]+"\""</DTS:PropertyExpression>
+          <DTS:PropertyExpression
+            DTS:Name="WorkingDirectory">@[$Project::WorkspacePath]+"Files_4_Script"</DTS:PropertyExpression>
           <DTS:EventHandlers>
             <DTS:EventHandler
               DTS:refId="Package\Download Files Loop 4\Download File.EventHandlers[OnError]"
@@ -5773,7 +5781,9 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA</BinaryItem>
           DTS:ThreadHint="17">
           <DTS:Variables />
           <DTS:PropertyExpression
-            DTS:Name="Arguments">"-ExecutionPolicy ByPass -command \". 'D:\\SSIS_Projects\\4ch_Downloader\\4ch_Downloader_Workspace\\Files_5_Script\\DownloadFile.ps1'\" \"http://"+@[User::File_link_5]+"\" \""+@[User::destination_file_location_5]+"\""</DTS:PropertyExpression>
+            DTS:Name="Arguments">"-ExecutionPolicy ByPass -command \". '"+ @[$Project::WorkspacePath] +"Files_5_Script\\DownloadFile.ps1'\" \"http://"+@[User::File_link_5]+"\" \""+@[User::destination_file_location_5]+"\""</DTS:PropertyExpression>
+          <DTS:PropertyExpression
+            DTS:Name="WorkingDirectory">@[$Project::WorkspacePath]+"Files_5_Script"</DTS:PropertyExpression>
           <DTS:EventHandlers>
             <DTS:EventHandler
               DTS:refId="Package\Download Files Loop 5 Second Try\Download File.EventHandlers[OnError]"
@@ -8828,7 +8838,7 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA</BinaryItem>
     design-time-name="Package\Download Files Loop 1\Download File.EventHandlers[OnError]">
     <LayoutInfo>
       <GraphLayout
-        Capacity="8" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
+        Capacity="8" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
         <NodeLayout
           Size="168,42"
           Id="Package\Download Files Loop 1\Download File.EventHandlers[OnError]\Delete If Error File"
@@ -8860,9 +8870,7 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA</BinaryItem>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="0,0,0,0"
-              RelativePosition="Any" />
+            <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -8884,9 +8892,7 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA</BinaryItem>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="0,0,0,0"
-              RelativePosition="Any" />
+            <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
       </GraphLayout>
