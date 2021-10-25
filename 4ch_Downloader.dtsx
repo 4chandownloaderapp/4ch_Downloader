@@ -11,8 +11,8 @@
   DTS:LocaleID="1045"
   DTS:ObjectName="Package"
   DTS:PackageType="5"
-  DTS:VersionBuild="67"
-  DTS:VersionGUID="{E6BFD153-7CA3-47D9-9B95-9AAE3A5AA319}">
+  DTS:VersionBuild="75"
+  DTS:VersionGUID="{0A782A67-9AE6-443B-8539-C5E447AE9050}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:Variables>
@@ -1653,9 +1653,9 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA</BinaryItem>
           DTS:ThreadHint="5">
           <DTS:Variables />
           <DTS:PropertyExpression
-            DTS:Name="Arguments">"-ExecutionPolicy ByPass -command \". '"+@[$Project::WorkspacePath]+"Files_1_Script\\DownloadFile.ps1'\" \"http://"+@[User::File_link_1]+"\" \""+@[User::destination_file_location_1]+"\""</DTS:PropertyExpression>
+            DTS:Name="Arguments">"-ExecutionPolicy ByPass -Command \"try{$WebClient=New-Object net.webclient; $WebClient.Headers[\"\"\"User-Agent\"\"\"] = \"\"\"Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:85.0) Gecko/20100101 Firefox/85.0\"\"\"; $webClient.DownloadFile(\"\"\""+"http://"+@[User::File_link_1]+"\"\"\", \"\"\""+@[User::destination_file_location_1]+"\"\"\");} catch{exit 1}\""</DTS:PropertyExpression>
           <DTS:PropertyExpression
-            DTS:Name="WorkingDirectory">@[$Project::WorkspacePath]+"Files_1_Script"</DTS:PropertyExpression>
+            DTS:Name="WorkingDirectory">@[$Project::WorkspacePath]+"Files_1"</DTS:PropertyExpression>
           <DTS:EventHandlers>
             <DTS:EventHandler
               DTS:refId="Package\Download Files Loop 1\Download File.EventHandlers[OnError]"
@@ -1757,8 +1757,8 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA</BinaryItem>
           <DTS:ObjectData>
             <ExecuteProcessData
               Executable="powershell.exe"
-              Arguments="-ExecutionPolicy ByPass -command &quot;. 'D:\SSIS_Projects\4ch_Downloader\4ch_Downloader_Workspace\Files_1_Script\DownloadFile.ps1'&quot; &quot;http://&quot; &quot;D:\SSIS_Projects\4ch_Downloader\4ch_Downloader_Workspace\Files_1\&quot;"
-              WorkingDirectory="D:\SSIS_Projects\4ch_Downloader\4ch_Downloader_Workspace\Files_1_Script" />
+              Arguments="-ExecutionPolicy ByPass -Command &quot;try{$WebClient=New-Object net.webclient; $WebClient.Headers[&quot;&quot;&quot;User-Agent&quot;&quot;&quot;] = &quot;&quot;&quot;Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:85.0) Gecko/20100101 Firefox/85.0&quot;&quot;&quot;; $webClient.DownloadFile(&quot;&quot;&quot;http://&quot;&quot;&quot;, &quot;&quot;&quot;D:\SSIS_Projects\4ch_Downloader\4ch_Downloader_Workspace\Files_1\&quot;&quot;&quot;);} catch{exit 1}&quot;"
+              WorkingDirectory="D:\SSIS_Projects\4ch_Downloader\4ch_Downloader_Workspace\Files_1" />
           </DTS:ObjectData>
         </DTS:Executable>
         <DTS:Executable
@@ -2690,9 +2690,9 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA</BinaryItem>
           DTS:ThreadHint="1">
           <DTS:Variables />
           <DTS:PropertyExpression
-            DTS:Name="Arguments">"-ExecutionPolicy ByPass -command \". '"+ @[$Project::WorkspacePath] +"Files_2_Script\\DownloadFile.ps1'\" \"http://"+@[User::File_link_2]+"\" \""+@[User::destination_file_location_2]+"\""</DTS:PropertyExpression>
+            DTS:Name="Arguments">"-ExecutionPolicy ByPass -Command \"try{$WebClient=New-Object net.webclient; $WebClient.Headers[\"\"\"User-Agent\"\"\"] = \"\"\"Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:85.0) Gecko/20100101 Firefox/85.0\"\"\"; $webClient.DownloadFile(\"\"\""+"http://"+@[User::File_link_2]+"\"\"\", \"\"\""+@[User::destination_file_location_2]+"\"\"\");} catch{exit 1}\""</DTS:PropertyExpression>
           <DTS:PropertyExpression
-            DTS:Name="WorkingDirectory">@[$Project::WorkspacePath]+"Files_2_Script"</DTS:PropertyExpression>
+            DTS:Name="WorkingDirectory">@[$Project::WorkspacePath]+"Files_2"</DTS:PropertyExpression>
           <DTS:EventHandlers>
             <DTS:EventHandler
               DTS:refId="Package\Download Files Loop 2\Download File.EventHandlers[OnError]"
@@ -2794,8 +2794,8 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA</BinaryItem>
           <DTS:ObjectData>
             <ExecuteProcessData
               Executable="powershell.exe"
-              Arguments="-ExecutionPolicy ByPass -command &quot;. 'D:\SSIS_Projects\4ch_Downloader\4ch_Downloader_Workspace\Files_2_Script\DownloadFile.ps1'&quot; &quot;http://&quot; &quot;D:\SSIS_Projects\4ch_Downloader\4ch_Downloader_Workspace\Files_2\&quot;"
-              WorkingDirectory="D:\SSIS_Projects\4ch_Downloader\4ch_Downloader_Workspace\Files_2_Script" />
+              Arguments="-ExecutionPolicy ByPass -Command &quot;try{$WebClient=New-Object net.webclient; $WebClient.Headers[&quot;&quot;&quot;User-Agent&quot;&quot;&quot;] = &quot;&quot;&quot;Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:85.0) Gecko/20100101 Firefox/85.0&quot;&quot;&quot;; $webClient.DownloadFile(&quot;&quot;&quot;http://&quot;&quot;&quot;, &quot;&quot;&quot;D:\SSIS_Projects\4ch_Downloader\4ch_Downloader_Workspace\Files_2\&quot;&quot;&quot;);} catch{exit 1}&quot;"
+              WorkingDirectory="D:\SSIS_Projects\4ch_Downloader\4ch_Downloader_Workspace\Files_2" />
           </DTS:ObjectData>
         </DTS:Executable>
         <DTS:Executable
@@ -3727,9 +3727,9 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA</BinaryItem>
           DTS:ThreadHint="9">
           <DTS:Variables />
           <DTS:PropertyExpression
-            DTS:Name="Arguments">"-ExecutionPolicy ByPass -command \". '"+ @[$Project::WorkspacePath] +"Files_3_Script\\DownloadFile.ps1'\" \"http://"+@[User::File_link_3]+"\" \""+@[User::destination_file_location_3]+"\""</DTS:PropertyExpression>
+            DTS:Name="Arguments">"-ExecutionPolicy ByPass -Command \"try{$WebClient=New-Object net.webclient; $WebClient.Headers[\"\"\"User-Agent\"\"\"] = \"\"\"Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:85.0) Gecko/20100101 Firefox/85.0\"\"\"; $webClient.DownloadFile(\"\"\""+"http://"+@[User::File_link_3]+"\"\"\", \"\"\""+@[User::destination_file_location_3]+"\"\"\");} catch{exit 1}\""</DTS:PropertyExpression>
           <DTS:PropertyExpression
-            DTS:Name="WorkingDirectory">@[$Project::WorkspacePath]+"Files_3_Script"</DTS:PropertyExpression>
+            DTS:Name="WorkingDirectory">@[$Project::WorkspacePath]+"Files_3"</DTS:PropertyExpression>
           <DTS:EventHandlers>
             <DTS:EventHandler
               DTS:refId="Package\Download Files Loop 3\Download File.EventHandlers[OnError]"
@@ -3831,8 +3831,8 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA</BinaryItem>
           <DTS:ObjectData>
             <ExecuteProcessData
               Executable="powershell.exe"
-              Arguments="-ExecutionPolicy ByPass -command &quot;. 'D:\SSIS_Projects\4ch_Downloader\4ch_Downloader_Workspace\Files_3_Script\DownloadFile.ps1'&quot; &quot;http://&quot; &quot;D:\SSIS_Projects\4ch_Downloader\4ch_Downloader_Workspace\Files_3\&quot;"
-              WorkingDirectory="D:\SSIS_Projects\4ch_Downloader\4ch_Downloader_Workspace\Files_3_Script" />
+              Arguments="-ExecutionPolicy ByPass -Command &quot;try{$WebClient=New-Object net.webclient; $WebClient.Headers[&quot;&quot;&quot;User-Agent&quot;&quot;&quot;] = &quot;&quot;&quot;Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:85.0) Gecko/20100101 Firefox/85.0&quot;&quot;&quot;; $webClient.DownloadFile(&quot;&quot;&quot;http://&quot;&quot;&quot;, &quot;&quot;&quot;D:\SSIS_Projects\4ch_Downloader\4ch_Downloader_Workspace\Files_3\&quot;&quot;&quot;);} catch{exit 1}&quot;"
+              WorkingDirectory="D:\SSIS_Projects\4ch_Downloader\4ch_Downloader_Workspace\Files_3" />
           </DTS:ObjectData>
         </DTS:Executable>
         <DTS:Executable
@@ -4764,9 +4764,9 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA</BinaryItem>
           DTS:ThreadHint="13">
           <DTS:Variables />
           <DTS:PropertyExpression
-            DTS:Name="Arguments">"-ExecutionPolicy ByPass -command \". '"+ @[$Project::WorkspacePath] +"Files_4_Script\\DownloadFile.ps1'\" \"http://"+@[User::File_link_4]+"\" \""+@[User::destination_file_location_4]+"\""</DTS:PropertyExpression>
+            DTS:Name="Arguments">"-ExecutionPolicy ByPass -Command \"try{$WebClient=New-Object net.webclient; $WebClient.Headers[\"\"\"User-Agent\"\"\"] = \"\"\"Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:85.0) Gecko/20100101 Firefox/85.0\"\"\"; $webClient.DownloadFile(\"\"\""+"http://"+@[User::File_link_4]+"\"\"\", \"\"\""+@[User::destination_file_location_4]+"\"\"\");} catch{exit 1}\""</DTS:PropertyExpression>
           <DTS:PropertyExpression
-            DTS:Name="WorkingDirectory">@[$Project::WorkspacePath]+"Files_4_Script"</DTS:PropertyExpression>
+            DTS:Name="WorkingDirectory">@[$Project::WorkspacePath]+"Files_4"</DTS:PropertyExpression>
           <DTS:EventHandlers>
             <DTS:EventHandler
               DTS:refId="Package\Download Files Loop 4\Download File.EventHandlers[OnError]"
@@ -4868,8 +4868,8 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA</BinaryItem>
           <DTS:ObjectData>
             <ExecuteProcessData
               Executable="powershell.exe"
-              Arguments="-ExecutionPolicy ByPass -command &quot;. 'D:\SSIS_Projects\4ch_Downloader\4ch_Downloader_Workspace\Files_4_Script\DownloadFile.ps1'&quot; &quot;http://&quot; &quot;D:\SSIS_Projects\4ch_Downloader\4ch_Downloader_Workspace\Files_4\&quot;"
-              WorkingDirectory="D:\SSIS_Projects\4ch_Downloader\4ch_Downloader_Workspace\Files_4_Script" />
+              Arguments="-ExecutionPolicy ByPass -Command &quot;try{$WebClient=New-Object net.webclient; $WebClient.Headers[&quot;&quot;&quot;User-Agent&quot;&quot;&quot;] = &quot;&quot;&quot;Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:85.0) Gecko/20100101 Firefox/85.0&quot;&quot;&quot;; $webClient.DownloadFile(&quot;&quot;&quot;http://&quot;&quot;&quot;, &quot;&quot;&quot;D:\SSIS_Projects\4ch_Downloader\4ch_Downloader_Workspace\Files_4\&quot;&quot;&quot;);} catch{exit 1}&quot;"
+              WorkingDirectory="D:\SSIS_Projects\4ch_Downloader\4ch_Downloader_Workspace\Files_4" />
           </DTS:ObjectData>
         </DTS:Executable>
         <DTS:Executable
@@ -5801,9 +5801,9 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA</BinaryItem>
           DTS:ThreadHint="17">
           <DTS:Variables />
           <DTS:PropertyExpression
-            DTS:Name="Arguments">"-ExecutionPolicy ByPass -command \". '"+ @[$Project::WorkspacePath] +"Files_5_Script\\DownloadFile.ps1'\" \"http://"+@[User::File_link_5]+"\" \""+@[User::destination_file_location_5]+"\""</DTS:PropertyExpression>
+            DTS:Name="Arguments">"-ExecutionPolicy ByPass -Command \"try{$WebClient=New-Object net.webclient; $WebClient.Headers[\"\"\"User-Agent\"\"\"] = \"\"\"Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:85.0) Gecko/20100101 Firefox/85.0\"\"\"; $webClient.DownloadFile(\"\"\""+"http://"+@[User::File_link_5]+"\"\"\", \"\"\""+@[User::destination_file_location_5]+"\"\"\");} catch{exit 1}\""</DTS:PropertyExpression>
           <DTS:PropertyExpression
-            DTS:Name="WorkingDirectory">@[$Project::WorkspacePath]+"Files_5_Script"</DTS:PropertyExpression>
+            DTS:Name="WorkingDirectory">@[$Project::WorkspacePath]+"Files_5"</DTS:PropertyExpression>
           <DTS:EventHandlers>
             <DTS:EventHandler
               DTS:refId="Package\Download Files Loop 5 Second Try\Download File.EventHandlers[OnError]"
@@ -5905,8 +5905,8 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA</BinaryItem>
           <DTS:ObjectData>
             <ExecuteProcessData
               Executable="powershell.exe"
-              Arguments="-ExecutionPolicy ByPass -command &quot;. 'D:\SSIS_Projects\4ch_Downloader\4ch_Downloader_Workspace\Files_5_Script\DownloadFile.ps1'&quot; &quot;http://&quot; &quot;D:\SSIS_Projects\4ch_Downloader\4ch_Downloader_Workspace\Files_5\&quot;"
-              WorkingDirectory="D:\SSIS_Projects\4ch_Downloader\4ch_Downloader_Workspace\Files_5_Script" />
+              Arguments="-ExecutionPolicy ByPass -Command &quot;try{$WebClient=New-Object net.webclient; $WebClient.Headers[&quot;&quot;&quot;User-Agent&quot;&quot;&quot;] = &quot;&quot;&quot;Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:85.0) Gecko/20100101 Firefox/85.0&quot;&quot;&quot;; $webClient.DownloadFile(&quot;&quot;&quot;http://&quot;&quot;&quot;, &quot;&quot;&quot;D:\SSIS_Projects\4ch_Downloader\4ch_Downloader_Workspace\Files_5\&quot;&quot;&quot;);} catch{exit 1}&quot;"
+              WorkingDirectory="D:\SSIS_Projects\4ch_Downloader\4ch_Downloader_Workspace\Files_5" />
           </DTS:ObjectData>
         </DTS:Executable>
         <DTS:Executable
@@ -7563,7 +7563,7 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA</BinaryItem>
           PanelSize="408,876"
           Size="408,919"
           Id="Package\Download Files Loop 2"
-          TopLeft="724,265" />
+          TopLeft="723,265" />
         <NodeLayout
           Size="202,42"
           Id="Package\Download Files Loop 3\Count Files To Download"
