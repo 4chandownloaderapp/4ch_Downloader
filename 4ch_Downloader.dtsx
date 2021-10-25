@@ -11,8 +11,8 @@
   DTS:LocaleID="1045"
   DTS:ObjectName="Package"
   DTS:PackageType="5"
-  DTS:VersionBuild="75"
-  DTS:VersionGUID="{0A782A67-9AE6-443B-8539-C5E447AE9050}">
+  DTS:VersionBuild="83"
+  DTS:VersionGUID="{E344B5FD-418B-4905-8904-523E16754509}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:Variables>
@@ -503,6 +503,17 @@
     </DTS:Variable>
     <DTS:Variable
       DTS:CreationName=""
+      DTS:DTSID="{07EBA976-798B-4C82-83CB-3DA44C367F64}"
+      DTS:EvaluateAsExpression="True"
+      DTS:Expression="@[$Project::WorkspacePath]+&quot;WebPage\\&quot;"
+      DTS:IncludeInDebugDump="2345"
+      DTS:Namespace="User"
+      DTS:ObjectName="folder_path_webpage">
+      <DTS:VariableValue
+        DTS:DataType="8">D:\SSIS_Projects\4ch_Downloader\4ch_Downloader_Workspace\WebPage\</DTS:VariableValue>
+    </DTS:Variable>
+    <DTS:Variable
+      DTS:CreationName=""
       DTS:DTSID="{8F14C771-2E61-4F1E-BF6E-977AA7C74691}"
       DTS:IncludeInDebugDump="6789"
       DTS:Namespace="User"
@@ -570,6 +581,312 @@
   </DTS:Variables>
   <DTS:Executables>
     <DTS:Executable
+      DTS:refId="Package\Create Folders in Workspace Directory"
+      DTS:CreationName="STOCK:SEQUENCE"
+      DTS:Description="Sequence Container"
+      DTS:DTSID="{01FD83D8-8DED-4A5F-8D49-AF000F5920D4}"
+      DTS:ExecutableType="STOCK:SEQUENCE"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="Create Folders in Workspace Directory">
+      <DTS:Variables />
+      <DTS:Executables>
+        <DTS:Executable
+          DTS:refId="Package\Create Folders in Workspace Directory\Files_1"
+          DTS:CreationName="Microsoft.FileSystemTask"
+          DTS:Description="File System Task"
+          DTS:DTSID="{8B254FDD-645B-4FA8-9CF3-0B36FD80574C}"
+          DTS:ExecutableType="Microsoft.FileSystemTask"
+          DTS:LocaleID="-1"
+          DTS:ObjectName="Files_1"
+          DTS:TaskContact="File System Task;Microsoft Corporation; SQL Server 2019; © 2019 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
+          DTS:ThreadHint="0">
+          <DTS:Variables />
+          <DTS:ObjectData>
+            <FileSystemData
+              TaskOperationType="CreateDirectory"
+              TaskOverwriteDestFile="True"
+              TaskSourcePath="User::folder_path_1"
+              TaskIsSourceVariable="True"
+              TaskDestinationPath="User::folder_path_1"
+              TaskIsDestinationVariable="True" />
+          </DTS:ObjectData>
+        </DTS:Executable>
+        <DTS:Executable
+          DTS:refId="Package\Create Folders in Workspace Directory\Files_1_Thumbs"
+          DTS:CreationName="Microsoft.FileSystemTask"
+          DTS:Description="File System Task"
+          DTS:DTSID="{5375f68b-4d22-481b-a540-8ab3779008d4}"
+          DTS:ExecutableType="Microsoft.FileSystemTask"
+          DTS:LocaleID="-1"
+          DTS:ObjectName="Files_1_Thumbs"
+          DTS:TaskContact="File System Task;Microsoft Corporation; SQL Server 2019; © 2019 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
+          DTS:ThreadHint="0">
+          <DTS:Variables />
+          <DTS:ObjectData>
+            <FileSystemData
+              TaskOperationType="CreateDirectory"
+              TaskOverwriteDestFile="True"
+              TaskSourcePath="User::folder_path_1_thumbs"
+              TaskIsSourceVariable="True" />
+          </DTS:ObjectData>
+        </DTS:Executable>
+        <DTS:Executable
+          DTS:refId="Package\Create Folders in Workspace Directory\Files_2"
+          DTS:CreationName="Microsoft.FileSystemTask"
+          DTS:Description="File System Task"
+          DTS:DTSID="{D55B356B-D07D-44A7-86C1-5C21C630BC1B}"
+          DTS:ExecutableType="Microsoft.FileSystemTask"
+          DTS:LocaleID="-1"
+          DTS:ObjectName="Files_2"
+          DTS:TaskContact="File System Task;Microsoft Corporation; SQL Server 2019; © 2019 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
+          DTS:ThreadHint="0">
+          <DTS:Variables />
+          <DTS:ObjectData>
+            <FileSystemData
+              TaskOperationType="CreateDirectory"
+              TaskOverwriteDestFile="True"
+              TaskSourcePath="User::folder_path_2"
+              TaskIsSourceVariable="True" />
+          </DTS:ObjectData>
+        </DTS:Executable>
+        <DTS:Executable
+          DTS:refId="Package\Create Folders in Workspace Directory\Files_2_Thumbs"
+          DTS:CreationName="Microsoft.FileSystemTask"
+          DTS:Description="File System Task"
+          DTS:DTSID="{1630edf3-246d-4cb2-a3a7-fc1a39389222}"
+          DTS:ExecutableType="Microsoft.FileSystemTask"
+          DTS:LocaleID="-1"
+          DTS:ObjectName="Files_2_Thumbs"
+          DTS:TaskContact="File System Task;Microsoft Corporation; SQL Server 2019; © 2019 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
+          DTS:ThreadHint="0">
+          <DTS:Variables />
+          <DTS:ObjectData>
+            <FileSystemData
+              TaskOperationType="CreateDirectory"
+              TaskOverwriteDestFile="True"
+              TaskSourcePath="User::folder_path_2_thumbs"
+              TaskIsSourceVariable="True" />
+          </DTS:ObjectData>
+        </DTS:Executable>
+        <DTS:Executable
+          DTS:refId="Package\Create Folders in Workspace Directory\Files_3"
+          DTS:CreationName="Microsoft.FileSystemTask"
+          DTS:Description="File System Task"
+          DTS:DTSID="{D8401727-5B52-4FC7-8D76-F428BB1B7E3D}"
+          DTS:ExecutableType="Microsoft.FileSystemTask"
+          DTS:LocaleID="-1"
+          DTS:ObjectName="Files_3"
+          DTS:TaskContact="File System Task;Microsoft Corporation; SQL Server 2019; © 2019 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
+          DTS:ThreadHint="0">
+          <DTS:Variables />
+          <DTS:ObjectData>
+            <FileSystemData
+              TaskOperationType="CreateDirectory"
+              TaskOverwriteDestFile="True"
+              TaskSourcePath="User::folder_path_3"
+              TaskIsSourceVariable="True"
+              TaskIsDestinationVariable="True" />
+          </DTS:ObjectData>
+        </DTS:Executable>
+        <DTS:Executable
+          DTS:refId="Package\Create Folders in Workspace Directory\Files_3_Thumbs"
+          DTS:CreationName="Microsoft.FileSystemTask"
+          DTS:Description="File System Task"
+          DTS:DTSID="{f725054f-6974-4c21-bc9e-7a887bd99afc}"
+          DTS:ExecutableType="Microsoft.FileSystemTask"
+          DTS:LocaleID="-1"
+          DTS:ObjectName="Files_3_Thumbs"
+          DTS:TaskContact="File System Task;Microsoft Corporation; SQL Server 2019; © 2019 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
+          DTS:ThreadHint="0">
+          <DTS:Variables />
+          <DTS:ObjectData>
+            <FileSystemData
+              TaskOperationType="CreateDirectory"
+              TaskOverwriteDestFile="True"
+              TaskSourcePath="User::folder_path_3_thumbs"
+              TaskIsSourceVariable="True" />
+          </DTS:ObjectData>
+        </DTS:Executable>
+        <DTS:Executable
+          DTS:refId="Package\Create Folders in Workspace Directory\Files_4"
+          DTS:CreationName="Microsoft.FileSystemTask"
+          DTS:Description="File System Task"
+          DTS:DTSID="{3e944a16-e75e-4601-b577-2ae67171f834}"
+          DTS:ExecutableType="Microsoft.FileSystemTask"
+          DTS:LocaleID="-1"
+          DTS:ObjectName="Files_4"
+          DTS:TaskContact="File System Task;Microsoft Corporation; SQL Server 2019; © 2019 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
+          DTS:ThreadHint="0">
+          <DTS:Variables />
+          <DTS:ObjectData>
+            <FileSystemData
+              TaskOperationType="CreateDirectory"
+              TaskOverwriteDestFile="True"
+              TaskSourcePath="User::folder_path_4"
+              TaskIsSourceVariable="True" />
+          </DTS:ObjectData>
+        </DTS:Executable>
+        <DTS:Executable
+          DTS:refId="Package\Create Folders in Workspace Directory\Files_4_Thumbs"
+          DTS:CreationName="Microsoft.FileSystemTask"
+          DTS:Description="File System Task"
+          DTS:DTSID="{791dbb47-1925-45b0-a056-47a7d9a31cda}"
+          DTS:ExecutableType="Microsoft.FileSystemTask"
+          DTS:LocaleID="-1"
+          DTS:ObjectName="Files_4_Thumbs"
+          DTS:TaskContact="File System Task;Microsoft Corporation; SQL Server 2019; © 2019 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
+          DTS:ThreadHint="0">
+          <DTS:Variables />
+          <DTS:ObjectData>
+            <FileSystemData
+              TaskOperationType="CreateDirectory"
+              TaskOverwriteDestFile="True"
+              TaskSourcePath="User::folder_path_4_thumbs"
+              TaskIsSourceVariable="True" />
+          </DTS:ObjectData>
+        </DTS:Executable>
+        <DTS:Executable
+          DTS:refId="Package\Create Folders in Workspace Directory\Files_5"
+          DTS:CreationName="Microsoft.FileSystemTask"
+          DTS:Description="File System Task"
+          DTS:DTSID="{6bf1be3d-783a-47b2-8460-5a38911f4dba}"
+          DTS:ExecutableType="Microsoft.FileSystemTask"
+          DTS:LocaleID="-1"
+          DTS:ObjectName="Files_5"
+          DTS:TaskContact="File System Task;Microsoft Corporation; SQL Server 2019; © 2019 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
+          DTS:ThreadHint="0">
+          <DTS:Variables />
+          <DTS:ObjectData>
+            <FileSystemData
+              TaskOperationType="CreateDirectory"
+              TaskOverwriteDestFile="True"
+              TaskSourcePath="User::folder_path_5"
+              TaskIsSourceVariable="True" />
+          </DTS:ObjectData>
+        </DTS:Executable>
+        <DTS:Executable
+          DTS:refId="Package\Create Folders in Workspace Directory\Files_5_Thumbs"
+          DTS:CreationName="Microsoft.FileSystemTask"
+          DTS:Description="File System Task"
+          DTS:DTSID="{32a7f711-26b1-4075-a4aa-de8e243c6f89}"
+          DTS:ExecutableType="Microsoft.FileSystemTask"
+          DTS:LocaleID="-1"
+          DTS:ObjectName="Files_5_Thumbs"
+          DTS:TaskContact="File System Task;Microsoft Corporation; SQL Server 2019; © 2019 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
+          DTS:ThreadHint="0">
+          <DTS:Variables />
+          <DTS:ObjectData>
+            <FileSystemData
+              TaskOperationType="CreateDirectory"
+              TaskOverwriteDestFile="True"
+              TaskSourcePath="User::folder_path_5_thumbs"
+              TaskIsSourceVariable="True" />
+          </DTS:ObjectData>
+        </DTS:Executable>
+        <DTS:Executable
+          DTS:refId="Package\Create Folders in Workspace Directory\WebPage"
+          DTS:CreationName="Microsoft.FileSystemTask"
+          DTS:Description="File System Task"
+          DTS:DTSID="{52C77DEB-2B26-47DC-820F-343C165FDC0D}"
+          DTS:ExecutableType="Microsoft.FileSystemTask"
+          DTS:LocaleID="-1"
+          DTS:ObjectName="WebPage"
+          DTS:TaskContact="File System Task;Microsoft Corporation; SQL Server 2019; © 2019 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
+          DTS:ThreadHint="0">
+          <DTS:Variables />
+          <DTS:ObjectData>
+            <FileSystemData
+              TaskOperationType="CreateDirectory"
+              TaskOverwriteDestFile="True"
+              TaskSourcePath="User::folder_path_webpage"
+              TaskIsSourceVariable="True" />
+          </DTS:ObjectData>
+        </DTS:Executable>
+      </DTS:Executables>
+      <DTS:PrecedenceConstraints>
+        <DTS:PrecedenceConstraint
+          DTS:refId="Package\Create Folders in Workspace Directory.PrecedenceConstraints[Constraint]"
+          DTS:CreationName=""
+          DTS:DTSID="{E21EC34A-8989-4909-99DF-AAF33FF4A99E}"
+          DTS:From="Package\Create Folders in Workspace Directory\Files_1"
+          DTS:LogicalAnd="True"
+          DTS:ObjectName="Constraint"
+          DTS:To="Package\Create Folders in Workspace Directory\Files_2" />
+        <DTS:PrecedenceConstraint
+          DTS:refId="Package\Create Folders in Workspace Directory.PrecedenceConstraints[Constraint 1]"
+          DTS:CreationName=""
+          DTS:DTSID="{10B1C7A8-B897-4018-ACB3-EFC2360EAE30}"
+          DTS:From="Package\Create Folders in Workspace Directory\Files_2"
+          DTS:LogicalAnd="True"
+          DTS:ObjectName="Constraint 1"
+          DTS:To="Package\Create Folders in Workspace Directory\Files_3" />
+        <DTS:PrecedenceConstraint
+          DTS:refId="Package\Create Folders in Workspace Directory.PrecedenceConstraints[Constraint 2]"
+          DTS:CreationName=""
+          DTS:DTSID="{92CDEB8A-2FE4-43EF-BCC5-D6639F925030}"
+          DTS:From="Package\Create Folders in Workspace Directory\Files_3"
+          DTS:LogicalAnd="True"
+          DTS:ObjectName="Constraint 2"
+          DTS:To="Package\Create Folders in Workspace Directory\Files_4" />
+        <DTS:PrecedenceConstraint
+          DTS:refId="Package\Create Folders in Workspace Directory.PrecedenceConstraints[Constraint 3]"
+          DTS:CreationName=""
+          DTS:DTSID="{9D5192D0-DD01-4EF8-8393-552E845A7EB6}"
+          DTS:From="Package\Create Folders in Workspace Directory\Files_4"
+          DTS:LogicalAnd="True"
+          DTS:ObjectName="Constraint 3"
+          DTS:To="Package\Create Folders in Workspace Directory\Files_5" />
+        <DTS:PrecedenceConstraint
+          DTS:refId="Package\Create Folders in Workspace Directory.PrecedenceConstraints[Constraint 4]"
+          DTS:CreationName=""
+          DTS:DTSID="{01CF45E4-93DA-451C-9EEC-7CFE6F5EECC0}"
+          DTS:From="Package\Create Folders in Workspace Directory\Files_5"
+          DTS:LogicalAnd="True"
+          DTS:ObjectName="Constraint 4"
+          DTS:To="Package\Create Folders in Workspace Directory\Files_1_Thumbs" />
+        <DTS:PrecedenceConstraint
+          DTS:refId="Package\Create Folders in Workspace Directory.PrecedenceConstraints[Constraint 5]"
+          DTS:CreationName=""
+          DTS:DTSID="{B3601687-CD67-451D-90E4-807EF7340BBD}"
+          DTS:From="Package\Create Folders in Workspace Directory\Files_1_Thumbs"
+          DTS:LogicalAnd="True"
+          DTS:ObjectName="Constraint 5"
+          DTS:To="Package\Create Folders in Workspace Directory\Files_2_Thumbs" />
+        <DTS:PrecedenceConstraint
+          DTS:refId="Package\Create Folders in Workspace Directory.PrecedenceConstraints[Constraint 6]"
+          DTS:CreationName=""
+          DTS:DTSID="{7DD64559-2CE6-4BDF-9537-B41DE85A65D7}"
+          DTS:From="Package\Create Folders in Workspace Directory\Files_2_Thumbs"
+          DTS:LogicalAnd="True"
+          DTS:ObjectName="Constraint 6"
+          DTS:To="Package\Create Folders in Workspace Directory\Files_3_Thumbs" />
+        <DTS:PrecedenceConstraint
+          DTS:refId="Package\Create Folders in Workspace Directory.PrecedenceConstraints[Constraint 7]"
+          DTS:CreationName=""
+          DTS:DTSID="{D6403519-7A3E-4C2C-99FE-466362B8DEDA}"
+          DTS:From="Package\Create Folders in Workspace Directory\Files_3_Thumbs"
+          DTS:LogicalAnd="True"
+          DTS:ObjectName="Constraint 7"
+          DTS:To="Package\Create Folders in Workspace Directory\Files_4_Thumbs" />
+        <DTS:PrecedenceConstraint
+          DTS:refId="Package\Create Folders in Workspace Directory.PrecedenceConstraints[Constraint 8]"
+          DTS:CreationName=""
+          DTS:DTSID="{2475CB4F-4F96-4E23-B277-6B60D49BF1B1}"
+          DTS:From="Package\Create Folders in Workspace Directory\Files_4_Thumbs"
+          DTS:LogicalAnd="True"
+          DTS:ObjectName="Constraint 8"
+          DTS:To="Package\Create Folders in Workspace Directory\Files_5_Thumbs" />
+        <DTS:PrecedenceConstraint
+          DTS:refId="Package\Create Folders in Workspace Directory.PrecedenceConstraints[Constraint 9]"
+          DTS:CreationName=""
+          DTS:DTSID="{9422B9B9-E36F-451D-BDBE-4DD0A7EA1742}"
+          DTS:From="Package\Create Folders in Workspace Directory\Files_5_Thumbs"
+          DTS:LogicalAnd="True"
+          DTS:ObjectName="Constraint 9"
+          DTS:To="Package\Create Folders in Workspace Directory\WebPage" />
+      </DTS:PrecedenceConstraints>
+    </DTS:Executable>
+    <DTS:Executable
       DTS:refId="Package\Download Boards Loop"
       DTS:CreationName="STOCK:FORLOOP"
       DTS:Description="For Loop Container"
@@ -610,6 +927,7 @@
         <DTS:Executable
           DTS:refId="Package\Download Boards Loop\Download WebPage to File"
           DTS:CreationName="Microsoft.ExecuteProcess"
+          DTS:DelayValidation="True"
           DTS:Description="Execute Process Task"
           DTS:DTSID="{73662214-11C1-4315-84C8-9B3E83DD3654}"
           DTS:ExecutableType="Microsoft.ExecuteProcess"
@@ -1644,6 +1962,7 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA</BinaryItem>
         <DTS:Executable
           DTS:refId="Package\Download Files Loop 1\Download File"
           DTS:CreationName="Microsoft.ExecuteProcess"
+          DTS:DelayValidation="True"
           DTS:Description="Execute Process Task"
           DTS:DTSID="{1DA6B313-2402-4AE6-B01F-D073C2CC894E}"
           DTS:ExecutableType="Microsoft.ExecuteProcess"
@@ -2681,6 +3000,7 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA</BinaryItem>
         <DTS:Executable
           DTS:refId="Package\Download Files Loop 2\Download File"
           DTS:CreationName="Microsoft.ExecuteProcess"
+          DTS:DelayValidation="True"
           DTS:Description="Execute Process Task"
           DTS:DTSID="{48ae4e7b-5d55-41b5-8dd6-e4ce7322972d}"
           DTS:ExecutableType="Microsoft.ExecuteProcess"
@@ -3718,6 +4038,7 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA</BinaryItem>
         <DTS:Executable
           DTS:refId="Package\Download Files Loop 3\Download File"
           DTS:CreationName="Microsoft.ExecuteProcess"
+          DTS:DelayValidation="True"
           DTS:Description="Execute Process Task"
           DTS:DTSID="{c0ce3905-590f-41a8-9d27-0d1587e41fde}"
           DTS:ExecutableType="Microsoft.ExecuteProcess"
@@ -4755,6 +5076,7 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA</BinaryItem>
         <DTS:Executable
           DTS:refId="Package\Download Files Loop 4\Download File"
           DTS:CreationName="Microsoft.ExecuteProcess"
+          DTS:DelayValidation="True"
           DTS:Description="Execute Process Task"
           DTS:DTSID="{9e5d61f1-ba82-46ea-bad6-544b04b1fb07}"
           DTS:ExecutableType="Microsoft.ExecuteProcess"
@@ -5792,6 +6114,7 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA</BinaryItem>
         <DTS:Executable
           DTS:refId="Package\Download Files Loop 5 Second Try\Download File"
           DTS:CreationName="Microsoft.ExecuteProcess"
+          DTS:DelayValidation="True"
           DTS:Description="Execute Process Task"
           DTS:DTSID="{85f3e24a-e67d-4495-9aa5-d875ff1cf79f}"
           DTS:ExecutableType="Microsoft.ExecuteProcess"
@@ -6609,6 +6932,56 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA</BinaryItem>
       </DTS:PrecedenceConstraints>
     </DTS:Executable>
   </DTS:Executables>
+  <DTS:PrecedenceConstraints>
+    <DTS:PrecedenceConstraint
+      DTS:refId="Package.PrecedenceConstraints[Constraint]"
+      DTS:CreationName=""
+      DTS:DTSID="{2A3B8AE9-D391-4079-961A-0B163D5B2B96}"
+      DTS:From="Package\Create Folders in Workspace Directory"
+      DTS:LogicalAnd="True"
+      DTS:ObjectName="Constraint"
+      DTS:To="Package\Download Boards Loop" />
+    <DTS:PrecedenceConstraint
+      DTS:refId="Package.PrecedenceConstraints[Constraint 1]"
+      DTS:CreationName=""
+      DTS:DTSID="{0B73925F-7142-4091-BCE7-9FCB86B2F5CF}"
+      DTS:From="Package\Create Folders in Workspace Directory"
+      DTS:LogicalAnd="True"
+      DTS:ObjectName="Constraint 1"
+      DTS:To="Package\Download Files Loop 1" />
+    <DTS:PrecedenceConstraint
+      DTS:refId="Package.PrecedenceConstraints[Constraint 2]"
+      DTS:CreationName=""
+      DTS:DTSID="{16F87A57-8AE5-4137-9A81-7FACEF603EC6}"
+      DTS:From="Package\Create Folders in Workspace Directory"
+      DTS:LogicalAnd="True"
+      DTS:ObjectName="Constraint 2"
+      DTS:To="Package\Download Files Loop 2" />
+    <DTS:PrecedenceConstraint
+      DTS:refId="Package.PrecedenceConstraints[Constraint 3]"
+      DTS:CreationName=""
+      DTS:DTSID="{3DD8A437-B041-4AC7-8579-75CC8E0F6D5B}"
+      DTS:From="Package\Create Folders in Workspace Directory"
+      DTS:LogicalAnd="True"
+      DTS:ObjectName="Constraint 3"
+      DTS:To="Package\Download Files Loop 3" />
+    <DTS:PrecedenceConstraint
+      DTS:refId="Package.PrecedenceConstraints[Constraint 4]"
+      DTS:CreationName=""
+      DTS:DTSID="{0DC9DCC7-1581-4A0C-9738-6E14FF588C94}"
+      DTS:From="Package\Create Folders in Workspace Directory"
+      DTS:LogicalAnd="True"
+      DTS:ObjectName="Constraint 4"
+      DTS:To="Package\Download Files Loop 4" />
+    <DTS:PrecedenceConstraint
+      DTS:refId="Package.PrecedenceConstraints[Constraint 5]"
+      DTS:CreationName=""
+      DTS:DTSID="{36C3DFBA-1744-4108-9F02-D98D42D89A87}"
+      DTS:From="Package\Create Folders in Workspace Directory"
+      DTS:LogicalAnd="True"
+      DTS:ObjectName="Constraint 5"
+      DTS:To="Package\Download Files Loop 5 Second Try" />
+  </DTS:PrecedenceConstraints>
   <DTS:DesignTimeProperties><![CDATA[<?xml version="1.0"?>
 <!--This CDATA section contains the layout information of the package. The section includes information such as (x,y) coordinates, width, and height.-->
 <!--If you manually edit this section and make a mistake, you can delete it. -->
@@ -6761,7 +7134,7 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA</BinaryItem>
           PanelSize="276,424"
           Size="276,467"
           Id="Package\Download Boards Loop"
-          TopLeft="14.8214285714281,268.321428571429" />
+          TopLeft="220.932539682539,1309.03571428571" />
         <NodeLayout
           Size="202,42"
           Id="Package\Download Files Loop 1\Count Files To Download"
@@ -7162,7 +7535,7 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA</BinaryItem>
           PanelSize="415,796"
           Size="415,839"
           Id="Package\Download Files Loop 1"
-          TopLeft="300.75,264.5" />
+          TopLeft="506.86111111111,1305.21428571428" />
         <NodeLayout
           Size="202,42"
           Id="Package\Download Files Loop 2\Count Files To Download"
@@ -7563,7 +7936,7 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA</BinaryItem>
           PanelSize="408,876"
           Size="408,919"
           Id="Package\Download Files Loop 2"
-          TopLeft="723,265" />
+          TopLeft="929.11111111111,1305.71428571428" />
         <NodeLayout
           Size="202,42"
           Id="Package\Download Files Loop 3\Count Files To Download"
@@ -7964,7 +8337,7 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA</BinaryItem>
           PanelSize="408,800"
           Size="408,843"
           Id="Package\Download Files Loop 3"
-          TopLeft="1147,267.5" />
+          TopLeft="1353.11111111111,1308.21428571428" />
         <NodeLayout
           Size="202,42"
           Id="Package\Download Files Loop 4\Count Files To Download"
@@ -8353,7 +8726,7 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA</BinaryItem>
           PanelSize="408,884"
           Size="408,927"
           Id="Package\Download Files Loop 4"
-          TopLeft="1566.33333333333,266.5" />
+          TopLeft="1772.44444444444,1307.21428571428" />
         <NodeLayout
           Size="202,42"
           Id="Package\Download Files Loop 5 Second Try\Count Files To Download"
@@ -8754,7 +9127,482 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA</BinaryItem>
           PanelSize="408,884"
           Size="408,927"
           Id="Package\Download Files Loop 5 Second Try"
-          TopLeft="1983,264.833333333333" />
+          TopLeft="2189.11111111112,1305.54761904762" />
+        <NodeLayout
+          Size="115,42"
+          Id="Package\Create Folders in Workspace Directory\Files_1"
+          TopLeft="28,5.5" />
+        <NodeLayout
+          Size="115,42"
+          Id="Package\Create Folders in Workspace Directory\Files_2"
+          TopLeft="28,107.5" />
+        <NodeLayout
+          Size="115,42"
+          Id="Package\Create Folders in Workspace Directory\Files_3"
+          TopLeft="28,209.5" />
+        <NodeLayout
+          Size="115,42"
+          Id="Package\Create Folders in Workspace Directory\Files_4"
+          TopLeft="28,311.5" />
+        <NodeLayout
+          Size="115,42"
+          Id="Package\Create Folders in Workspace Directory\Files_5"
+          TopLeft="28.0000000000001,413.5" />
+        <NodeLayout
+          Size="160,42"
+          Id="Package\Create Folders in Workspace Directory\Files_1_Thumbs"
+          TopLeft="5.50000000000007,515.5" />
+        <NodeLayout
+          Size="160,42"
+          Id="Package\Create Folders in Workspace Directory\Files_2_Thumbs"
+          TopLeft="5.50000000000009,617.5" />
+        <NodeLayout
+          Size="160,42"
+          Id="Package\Create Folders in Workspace Directory\Files_3_Thumbs"
+          TopLeft="5.5000000000001,719.5" />
+        <NodeLayout
+          Size="160,42"
+          Id="Package\Create Folders in Workspace Directory\Files_4_Thumbs"
+          TopLeft="5.50000000000011,821.5" />
+        <NodeLayout
+          Size="160,42"
+          Id="Package\Create Folders in Workspace Directory\Files_5_Thumbs"
+          TopLeft="5.50000000000011,923.5" />
+        <EdgeLayout
+          Id="Package\Create Folders in Workspace Directory.PrecedenceConstraints[Constraint]"
+          TopLeft="85.5,47.5">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,60"
+              Start="0,0"
+              End="0,52.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,52.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Create Folders in Workspace Directory.PrecedenceConstraints[Constraint 1]"
+          TopLeft="85.5,149.5">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,60"
+              Start="0,0"
+              End="0,52.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,52.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Create Folders in Workspace Directory.PrecedenceConstraints[Constraint 2]"
+          TopLeft="85.5,251.5">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,60"
+              Start="0,0"
+              End="0,52.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,52.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Create Folders in Workspace Directory.PrecedenceConstraints[Constraint 3]"
+          TopLeft="85.5000000000001,353.5">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,60"
+              Start="0,0"
+              End="0,52.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,52.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Create Folders in Workspace Directory.PrecedenceConstraints[Constraint 4]"
+          TopLeft="85.5000000000001,455.5">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,60"
+              Start="0,0"
+              End="0,52.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,52.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Create Folders in Workspace Directory.PrecedenceConstraints[Constraint 5]"
+          TopLeft="85.5000000000001,557.5">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,60"
+              Start="0,0"
+              End="0,52.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,52.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Create Folders in Workspace Directory.PrecedenceConstraints[Constraint 6]"
+          TopLeft="85.5000000000001,659.5">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,60"
+              Start="0,0"
+              End="0,52.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,52.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Create Folders in Workspace Directory.PrecedenceConstraints[Constraint 7]"
+          TopLeft="85.5000000000001,761.5">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,60"
+              Start="0,0"
+              End="0,52.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,52.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Create Folders in Workspace Directory.PrecedenceConstraints[Constraint 8]"
+          TopLeft="85.5000000000001,863.5">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,60"
+              Start="0,0"
+              End="0,52.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,52.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <NodeLayout
+          Size="127,42"
+          Id="Package\Create Folders in Workspace Directory\WebPage"
+          TopLeft="19.7777777777778,1007.77777777778" />
+        <EdgeLayout
+          Id="Package\Create Folders in Workspace Directory.PrecedenceConstraints[Constraint 9]"
+          TopLeft="84.388888888889,965.5">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,42.2777777777778"
+              Start="0,0"
+              End="0,34.7777777777778">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,34.7777777777778" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <ContainerLayout
+          HeaderHeight="43"
+          IsExpanded="True"
+          PanelSize="227,1107"
+          Size="227,1150"
+          Id="Package\Create Folders in Workspace Directory"
+          TopLeft="1378.33333333333,16.8888888888888" />
+        <EdgeLayout
+          Id="Package.PrecedenceConstraints[Constraint]"
+          TopLeft="1413.61904761905,1166.88888888889">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="-1054.68650793651,142.146825396824"
+              Start="0,0"
+              End="-1054.68650793651,134.646825396824">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,29.7112490379409" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,29.7112490379409"
+                    Point2="0,33.7112490379409"
+                    Point3="-4,33.7112490379409" />
+                  <mssgle:LineSegment
+                    End="-1050.68650793651,33.7112490379409" />
+                  <mssgle:CubicBezierSegment
+                    Point1="-1050.68650793651,33.7112490379409"
+                    Point2="-1054.68650793651,33.7112490379409"
+                    Point3="-1054.68650793651,37.7112490379409" />
+                  <mssgle:LineSegment
+                    End="-1054.68650793651,134.646825396824" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package.PrecedenceConstraints[Constraint 1]"
+          TopLeft="1444.90476190476,1166.88888888889">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="-730.543650793652,138.325396825394"
+              Start="0,0"
+              End="-730.543650793652,130.825396825394">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,47.1381474975277" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,47.1381474975277"
+                    Point2="0,51.1381474975277"
+                    Point3="-4,51.1381474975277" />
+                  <mssgle:LineSegment
+                    End="-726.543650793652,51.1381474975277" />
+                  <mssgle:CubicBezierSegment
+                    Point1="-726.543650793652,51.1381474975277"
+                    Point2="-730.543650793652,51.1381474975277"
+                    Point3="-730.543650793652,55.1381474975277" />
+                  <mssgle:LineSegment
+                    End="-730.543650793652,130.825396825394" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package.PrecedenceConstraints[Constraint 2]"
+          TopLeft="1476.19047619048,1166.88888888889">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="-343.079365079367,138.825396825394"
+              Start="0,0"
+              End="-343.079365079367,131.325396825394">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,60.2753611526833" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,60.2753611526833"
+                    Point2="0,64.2753611526833"
+                    Point3="-4,64.2753611526833" />
+                  <mssgle:LineSegment
+                    End="-339.079365079367,64.2753611526833" />
+                  <mssgle:CubicBezierSegment
+                    Point1="-339.079365079367,64.2753611526833"
+                    Point2="-343.079365079367,64.2753611526833"
+                    Point3="-343.079365079367,68.2753611526833" />
+                  <mssgle:LineSegment
+                    End="-343.079365079367,131.325396825394" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package.PrecedenceConstraints[Constraint 3]"
+          TopLeft="1507.47619047619,1166.88888888889">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="49.6349206349182,141.325396825394"
+              Start="0,0"
+              End="49.6349206349182,133.825396825394">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,61.432846789723" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,61.432846789723"
+                    Point2="0,65.432846789723"
+                    Point3="4,65.432846789723" />
+                  <mssgle:LineSegment
+                    End="45.6349206349182,65.432846789723" />
+                  <mssgle:CubicBezierSegment
+                    Point1="45.6349206349182,65.432846789723"
+                    Point2="49.6349206349182,65.432846789723"
+                    Point3="49.6349206349182,69.432846789723" />
+                  <mssgle:LineSegment
+                    End="49.6349206349182,133.825396825394" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package.PrecedenceConstraints[Constraint 4]"
+          TopLeft="1538.76190476191,1166.88888888889">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="437.682539682534,140.325396825394"
+              Start="0,0"
+              End="437.682539682534,132.825396825394">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,47.8775366288249" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,47.8775366288249"
+                    Point2="0,51.8775366288249"
+                    Point3="4,51.8775366288249" />
+                  <mssgle:LineSegment
+                    End="433.682539682534,51.8775366288249" />
+                  <mssgle:CubicBezierSegment
+                    Point1="433.682539682534,51.8775366288249"
+                    Point2="437.682539682534,51.8775366288249"
+                    Point3="437.682539682534,55.8775366288249" />
+                  <mssgle:LineSegment
+                    End="437.682539682534,132.825396825394" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package.PrecedenceConstraints[Constraint 5]"
+          TopLeft="1570.04761904762,1166.88888888889">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="823.063492063499,138.658730158727"
+              Start="0,0"
+              End="823.063492063499,131.158730158727">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,28.8840195383635" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,28.8840195383635"
+                    Point2="0,32.8840195383635"
+                    Point3="4,32.8840195383635" />
+                  <mssgle:LineSegment
+                    End="819.063492063499,32.8840195383635" />
+                  <mssgle:CubicBezierSegment
+                    Point1="819.063492063499,32.8840195383635"
+                    Point2="823.063492063499,32.8840195383635"
+                    Point3="823.063492063499,36.8840195383635" />
+                  <mssgle:LineSegment
+                    End="823.063492063499,131.158730158727" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
       </GraphLayout>
     </LayoutInfo>
   </Package>
